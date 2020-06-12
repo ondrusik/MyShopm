@@ -1,3 +1,4 @@
+using MyShop.Core;
 using MyShop.Core.Contracts;
 using MyShop.Core.Models;
 using MyShop.DataAccess.InMemory;
@@ -52,6 +53,7 @@ namespace MyShop.WebUI
             container.RegisterType<IRepository<Basket>, SQLRepository<Basket>>();
             container.RegisterType<IRepository<BasketItem>, SQLRepository<BasketItem>>();
             container.RegisterType<IBasketService, BasketService>();
+            container.RegisterType<IRepository<Customer>, SQLRepository<Customer>>();
         }
     }
 }
